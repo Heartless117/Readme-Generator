@@ -8,52 +8,74 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
 {
     type: 'input',
+    name: 'title',
+    message: 'Enter the title of your project',
+},
+
+{
+    type: 'input',
     name: 'description',
-    message: 'Enter a description of your project',
+    message: 'Describe your application',
 },
 
 {
     type: 'input',
     name: 'installation',
-    message: 'Enter installation instructions',
+    message: 'Explain how to install your application',
 },
 
 {
     type: 'input',
     name: 'usage',
-    message: 'Enter usage information',
-},
-
-{
-    type: 'input',
-    name: 'contributing',
-    message: 'Enter contribution guidelines',
-},
-
-{
-    type: 'input',
-    name: 'tests',
-    message: 'Enter test instructions',
+    message: 'Provide instructions and examples for use',
 },
 
 {
     type: 'list',
     name: 'license',
     message: 'Choose a license for your project',
-    choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3-Clause', 'None'],
+    choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'No License'],
+},
+
+{
+    type: 'confirm',
+    name: 'confirmContributers',
+    message: 'Will other developers be contributing to this project?',
+    default: true
+},
+
+{
+    type: 'input',
+    name: 'contributers',
+    message: 'List the names of the contributers',
+    when: ({ confirmContributers }) => {
+        if (confirmContributers) {
+            return true;
+        } else {
+            message: 'No contributions';
+        }
+},
+
+validate: confirmContributers => {
+        if (contributerInput) {
+          return true;
+      } else {
+        return false;
+      }
+    }
 },
 
 {
     type: 'input',
     name: 'github',
-    message: 'Enter your GitHub username',
+    message: 'What is your GitHub username?',
 },
 
 {
     type: 'input',
     name: 'email',
-    message: 'Enter your email address',
-}
+    message: 'What is your email address?',
+},
 
 ];
 
