@@ -48,23 +48,7 @@ const questions = [
     type: 'input',
     name: 'contributers',
     message: 'List the names of the contributers',
-    when: ({ confirmContributers }) => {
-        if (confirmContributers) {
-            return true;
-        } else {
-            message: 'No contributions';
-        }
 },
-
-validate: confirmContributers => {
-        if (contributerInput) {
-          return true;
-      } else {
-        return false;
-      }
-    }
-},
-
 
 {
     type: 'input',
@@ -82,27 +66,17 @@ validate: confirmContributers => {
 
 // TODO: Create a function to write README file
 
-
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("README file created successfully!");
-        }
-    });
-}
-
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
 // TODO: Create a function to initialize app
+
 function init() {
-    inquirer.prompt(questions).then((answers) => {
-            const markdown = generateMarkdown(answers);
-            writeToFile("README.md", markdown);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-}
+    inquirer.prompt(questions).then((responses) => {
+      console.log("Creating Professional README.md File...");
+      writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+    });
+  }
 
 // Function call to initialize app
 init();
