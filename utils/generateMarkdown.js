@@ -43,8 +43,8 @@ ${data.tests}
 
 ## Questions
 Contact me on this platforms:
-[${data.email}](mailto:${data.email}). 
-[GitHub Profile](https://github.com/${data.github}) 
+Email: [${data.email}](mailto:${data.email}). 
+Github: [GitHub Profile](https://github.com/${data.github}) 
 `;
 }
 
