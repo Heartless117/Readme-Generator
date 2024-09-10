@@ -1,8 +1,9 @@
 
   # README GENERATOR
+  ![Github license](http://img.shield.io/badge/license-MIT-blue.svg)
 
 ## Description
-Using the intergrated terminal you will generate your own README 
+This project was created using typescript ans OOP to make a vehicle builder
 
 ## Table of Contents
 - [Installation](#installation)
@@ -14,21 +15,24 @@ Using the intergrated terminal you will generate your own README
 
 
 ## Installation
-First node, inquirer, then install
+
+Step 1- Download files
+step 2- open vscode using that file you just download 
 
 ## Usage
-You open the interdrated terminal and write this command "node index.js"
+
+When you open the terminal type "npm start"
 
 ## Contribution
-undefined
+n/a
 
 ## Tests
 n/a
 
 ## License
- undefined license.
+The licence i used is MIT license
 
 ## Questions
 Contact me on this platforms:
-Email: [batman@thebatcave.got](mailto:batman@thebatcave.got). 
-Github: [GitHub Profile](https://github.com/Heartless117) 
+Email: [christiancruz1997@gmail.com](mailto:christiancruz1997@gmail.com). 
+Github: [GitHub Profile](https://github.com/Heartless117)
