@@ -3,7 +3,7 @@
   ![Github license](http://img.shield.io/badge/license-MIT-blue.svg)
 
 ## Description
-This project was created using typescript ans OOP to make a vehicle builder
+Using the intergrated terminal you will generate your own README
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,12 +16,12 @@ This project was created using typescript ans OOP to make a vehicle builder
 
 ## Installation
 
-Step 1- Download files
-step 2- open vscode using that file you just download 
+First node, inquirer, then install
+
 
 ## Usage
 
-When you open the terminal type "npm start"
+You open the interdrated terminal and write this command "node index.js"
 
 ## Contribution
 n/a
